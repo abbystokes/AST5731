@@ -1,0 +1,31 @@
+digraph {
+	subgraph cluster203 {
+		X1 [label="X1
+~
+Normal" shape=ellipse]
+		tau_y [label="tau_y
+~
+Gamma" shape=ellipse style=filled]
+		Y [label="Y
+~
+Normal" shape=ellipse style=filled]
+		X_star [label="X_star
+~
+Normal" shape=ellipse style=filled]
+		tau_x [label="tau_x
+~
+Gamma" shape=ellipse style=filled]
+		label=203 labeljust=r labelloc=b style=rounded
+	}
+	subgraph cluster2 {
+		beta [label="beta
+~
+Normal" shape=ellipse]
+		label=2 labeljust=r labelloc=b style=rounded
+	}
+	X1 -> X_star
+	tau_x -> X_star
+	tau_y -> Y
+	X1 -> Y
+	beta -> Y
+}
